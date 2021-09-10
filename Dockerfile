@@ -10,7 +10,7 @@ COPY . ./
 ENV TSFILE=tailscale_1.14.0_amd64.tgz
 RUN wget https://pkgs.tailscale.com/stable/${TSFILE} && \
   tar xzf ${TSFILE} --strip-components=1
-COPY . ./
+COPY . ./app
 
 
 FROM alpine:latest
