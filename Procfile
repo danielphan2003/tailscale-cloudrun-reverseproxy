@@ -1,1 +1,1 @@
-web: start.sh $TARGET_URL
+web: /app/start.sh $TARGET_URL
