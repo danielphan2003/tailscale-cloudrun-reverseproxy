@@ -1,0 +1,9 @@
+build:
+  docker:
+    web: Dockerfile
+release:
+  command:
+    - export TSFILE=tailscale_1.14.0_amd64.tgz
+    - wget https://pkgs.tailscale.com/stable/${TSFILE} && tar xzf ${TSFILE} --strip-components=1
+run:
+  web: /app/start.sh $TARGET_URL
